@@ -47,7 +47,7 @@ persistent-db
 # Local database dumps
 /db/dbtmp/*.sql
 /db/dbtmp/*.gz
-/db/*.sql
+!/db/*.sql
 
 # Ignore Drupal's file directory
 /web/sites/*/files/

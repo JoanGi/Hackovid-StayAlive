@@ -1,0 +1,16 @@
+version: "3"
+# Rename this file to docker-compose.override.yml
+# Use it to add any custom settings to docker-compose.override.yml
+services:
+  php:
+    volumes:
+      - ../:/var/www/html:cached
+# For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
+#      - ./:/var/www/html:cached # User-guided caching
+#      - docker-sync:/var/www/html # Docker-sync
+
+#volumes:
+## Docker-sync for macOS users
+#  docker-sync:
+#    external: true
+

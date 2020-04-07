@@ -1,0 +1,149 @@
+          ok  Starting native_osx for sync docker-sync
+          ok  docker-sync container still running, restarting unison in container
+unix:///tmp/supervisor.sock no such file
+     success  Sync container started
+     success  Showing unison logs from your sync container: docker-sync
+          ok  Starting native_osx for sync docker-sync
+          ok  docker-sync container still running, restarting unison in container
+unix:///tmp/supervisor.sock no such file
+     success  Sync container started
+     success  Showing unison logs from your sync container: docker-sync
+          ok  Starting native_osx for sync docker-sync
+          ok  docker-sync container still running, restarting unison in container
+unix:///tmp/supervisor.sock no such file
+     success  Sync container started
+     success  Showing unison logs from your sync container: docker-sync
+          ok  Starting native_osx for sync docker-sync
+          ok  docker-sync container still running, restarting unison in container
+unison: stopped
+unison: started
+     success  Sync container started
+     success  Showing unison logs from your sync container: docker-sync
+[2020-03-09 09:34:57 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:34:57.38 on 09 Mar 2020
+[2020-03-09 09:34:57 +0100] Sync Log:  [BGN] Updating file docker_local/.docker-sync/daemon.log from /host_sync to /app_sync
+[2020-03-09 09:34:57 +0100] Sync Log:  [END] Updating file docker_local/.docker-sync/daemon.log
+[2020-03-09 09:34:57 +0100] Sync Log:  [BGN] Updating file docker_local/.docker-sync/daemon.pid from /host_sync to /app_sync
+[2020-03-09 09:34:57 +0100] Sync Log:  [END] Updating file docker_local/.docker-sync/daemon.pid
+[2020-03-09 09:34:57 +0100] Sync Log:  [BGN] Updating file web/themes/contrib/bootstrap_barrio/css/print.css from /host_sync to /app_sync
+[2020-03-09 09:34:57 +0100] Sync Log:  [END] Updating file web/themes/contrib/bootstrap_barrio/css/print.css
+[2020-03-09 09:34:57 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:34:57.40 on 09 Mar 2020
+[2020-03-09 09:34:57 +0100] Sync Log:  Synchronization complete at 09:34:57  (3 items transferred, 0 skipped, 0 failed)
+[2020-03-09 09:38:10 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:38:10.52 on 09 Mar 2020
+[2020-03-09 09:38:10 +0100] Sync Log:  [BGN] Updating file vendor/composer/installed.json from /app_sync to /host_sync
+[2020-03-09 09:38:10 +0100] Sync Log:  [END] Updating file vendor/composer/installed.json
+[2020-03-09 09:38:10 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:38:10.55 on 09 Mar 2020
+[2020-03-09 09:38:10 +0100] Sync Log:  Synchronization complete at 09:38:10  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:38:12 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:38:12.35 on 09 Mar 2020
+[2020-03-09 09:38:12 +0100] Sync Log:  [BGN] Updating file composer.lock from /app_sync to /host_sync
+[2020-03-09 09:38:12 +0100] Sync Log:  [END] Updating file composer.lock
+[2020-03-09 09:38:12 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:38:12.38 on 09 Mar 2020
+[2020-03-09 09:38:12 +0100] Sync Log:  Synchronization complete at 09:38:12  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:39:09 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:39:08.93 on 09 Mar 2020
+[2020-03-09 09:39:09 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_html.html.twig_MxnQMosU4GzG0dLEgzFlKMq9l from /app_sync to /host_sync
+[2020-03-09 09:39:09 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_html.html.twig_MxnQMosU4GzG0dLEgzFlKMq9l
+[2020-03-09 09:39:09 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:39:08.96 on 09 Mar 2020
+[2020-03-09 09:39:09 +0100] Sync Log:  Synchronization complete at 09:39:09  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:39:10 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:39:10.09 on 09 Mar 2020
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_o5D2_CwdbbVRj5t9G_cMI3ov7 from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_o5D2_CwdbbVRj5t9G_cMI3ov7
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_links.html.twig_SlTRr3Yo4I8GMUtn_-FJqaHQY from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_links.html.twig_SlTRr3Yo4I8GMUtn_-FJqaHQY
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu--toolbar.html.twig_84shRV0pptx933kPgAAtrMri7 from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu--toolbar.html.twig_84shRV0pptx933kPgAAtrMri7
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_off-canvas-page-wrapper.h_TV1KrDYGbw5RlGKXhWh-bOURu from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_off-canvas-page-wrapper.h_TV1KrDYGbw5RlGKXhWh-bOURu
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_page-title.html.twig_PQ-SanjVNp8rP5aA0WxhG3tFi from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_page-title.html.twig_PQ-SanjVNp8rP5aA0WxhG3tFi
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_page-title.html.twig_l_0Pbi5H9hHkYzoyYr2lmlOh_ from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_page-title.html.twig_l_0Pbi5H9hHkYzoyYr2lmlOh_
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_page.html.twig_Z9CL3buOsix81HvzZF-hNy13X from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_page.html.twig_Z9CL3buOsix81HvzZF-hNy13X
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_region--header.html.twig_XXsGXRWfTvj93m1vm70CBv0LL from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_region--header.html.twig_XXsGXRWfTvj93m1vm70CBv0LL
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_region.html.twig_cDkoFtEqJZDkSfrDQ4f4fbMbx from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_region.html.twig_cDkoFtEqJZDkSfrDQ4f4fbMbx
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig__TTUrL4ADkAi79uR0AXlSFKib from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig__TTUrL4ADkAi79uR0AXlSFKib
+[2020-03-09 09:39:10 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig_y7oyZEkcj3DRppBH5x26izLRy from /app_sync to /host_sync
+[2020-03-09 09:39:10 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig_y7oyZEkcj3DRppBH5x26izLRy
+[2020-03-09 09:39:10 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:39:10.28 on 09 Mar 2020
+[2020-03-09 09:39:10 +0100] Sync Log:  Synchronization complete at 09:39:10  (11 items transferred, 0 skipped, 0 failed)
+[2020-03-09 09:39:25 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:39:25.08 on 09 Mar 2020
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_block--local-actions-bloc_BSKUQJvukiPOWhTqEhVHry5Bq from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_block--local-actions-bloc_BSKUQJvukiPOWhTqEhVHry5Bq
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_block--local-tasks-block._e_wfWFoT7qT6YYkMuZt_eRmWt from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_block--local-tasks-block._e_wfWFoT7qT6YYkMuZt_eRmWt
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_SUwJMWJUKG9GC84GY7OwmW9yF from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_SUwJMWJUKG9GC84GY7OwmW9yF
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_dnFXZc90CZhtXLE42GGjOkpoC from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_block.html.twig_dnFXZc90CZhtXLE42GGjOkpoC
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_breadcrumb.html.twig_nhHwj_nRRCoYsmDUu7g1LP2pI from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_breadcrumb.html.twig_nhHwj_nRRCoYsmDUu7g1LP2pI
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_container.html.twig_GPR7B4fD14SqJKKbNRVYuvYO8 from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_container.html.twig_GPR7B4fD14SqJKKbNRVYuvYO8
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_details.html.twig_ow0qKYBmrgpSRWmmOQFHoJD6W from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_details.html.twig_ow0qKYBmrgpSRWmmOQFHoJD6W
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element-label.html.t_m3h4iXPg4aISi2Fyp0e9eW1WC from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element-label.html.t_m3h4iXPg4aISi2Fyp0e9eW1WC
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element-label.html.t_o3Y7PszpwlUu5ExW6L_V9ZlhG from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element-label.html.t_o3Y7PszpwlUu5ExW6L_V9ZlhG
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element.html.twig_5KU0pmzjWPXvRpYnUZHo78Olr from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_form-element.html.twig_5KU0pmzjWPXvRpYnUZHo78Olr
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_form.html.twig_BWZfwfO5JYuhqoWAEcBkz3v5e from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_form.html.twig_BWZfwfO5JYuhqoWAEcBkz3v5e
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_hamburger-menu.svg_Wlim6V3E77TW1KU9D8S5xtiUU from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_hamburger-menu.svg_Wlim6V3E77TW1KU9D8S5xtiUU
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_image.html.twig_uczFNCbT4jcgsXJVKZEx2GhGI from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_image.html.twig_uczFNCbT4jcgsXJVKZEx2GhGI
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_input.html.twig_NHzG7EOtBuE6ZHXJDtb2nDsSy from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_input.html.twig_NHzG7EOtBuE6ZHXJDtb2nDsSy
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-action.html.tw_r7TG4Gecyi14vPqk-mgQj4F6M from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-action.html.tw_r7TG4Gecyi14vPqk-mgQj4F6M
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-task.html.twig_sY3VMYaoyqy4TI7Hd82XnkDEA from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-task.html.twig_sY3VMYaoyqy4TI7Hd82XnkDEA
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-tasks.html.twi_2MwOv526a2xQF91KOshOZbWpA from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_menu-local-tasks.html.twi_2MwOv526a2xQF91KOshOZbWpA
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_off-canvas-page-wrapper.h_3SgMBXOkS3dikEhePOo2I2jtd from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_off-canvas-page-wrapper.h_3SgMBXOkS3dikEhePOo2I2jtd
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_page.html.twig_eBmDg704odkwzJKEeJJxUiQgz from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_page.html.twig_eBmDg704odkwzJKEeJJxUiQgz
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_region--breadcrumb.html.t_bNoqzRGnMVqR_66cKeCV_6LXc from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_region--breadcrumb.html.t_bNoqzRGnMVqR_66cKeCV_6LXc
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_select.html.twig_zUtt7yae7Re4iE27cq96SrFIC from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_select.html.twig_zUtt7yae7Re4iE27cq96SrFIC
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig_A8lq8Lg9ozGmYKiHmfcAsycF3 from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_status-messages.html.twig_A8lq8Lg9ozGmYKiHmfcAsycF3
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_system-themes-page.html.t_hOBusk1tK2d-EHQSwFsjZLtvE from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_system-themes-page.html.t_hOBusk1tK2d-EHQSwFsjZLtvE
+[2020-03-09 09:39:25 +0100] Sync Log:  [BGN] Copying web/sites/default/files/php/twig/5e5e2c48be867_toolbar.html.twig_IR3yzMr5NjPJHS_S7uoRClFaV from /app_sync to /host_sync
+[2020-03-09 09:39:25 +0100] Sync Log:  [END] Copying web/sites/default/files/php/twig/5e5e2c48be867_toolbar.html.twig_IR3yzMr5NjPJHS_S7uoRClFaV
+[2020-03-09 09:39:25 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:39:25.58 on 09 Mar 2020
+[2020-03-09 09:39:25 +0100] Sync Log:  Synchronization complete at 09:39:25  (24 items transferred, 0 skipped, 0 failed)
+[2020-03-09 09:42:25 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:42:25.56 on 09 Mar 2020
+[2020-03-09 09:42:25 +0100] Sync Log:  [BGN] Deleting web/themes/contrib/bootstrap_barrio from /app_sync
+[2020-03-09 09:42:25 +0100] Sync Log:  [END] Deleting web/themes/contrib/bootstrap_barrio
+[2020-03-09 09:42:25 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:42:25.62 on 09 Mar 2020
+[2020-03-09 09:42:25 +0100] Sync Log:  Synchronization complete at 09:42:25  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:42:26 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:42:26.71 on 09 Mar 2020
+[2020-03-09 09:42:26 +0100] Sync Log:  [BGN] Deleting web/themes/contrib/bootstrap_sass from /app_sync
+[2020-03-09 09:42:26 +0100] Sync Log:  [END] Deleting web/themes/contrib/bootstrap_sass
+[2020-03-09 09:42:26 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:42:26.74 on 09 Mar 2020
+[2020-03-09 09:42:26 +0100] Sync Log:  Synchronization complete at 09:42:26  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:42:29 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:42:29.05 on 09 Mar 2020
+[2020-03-09 09:42:29 +0100] Sync Log:  [BGN] Deleting web/sites/default/files/php/twig/5e5e608034404_fieldset.html.twig_hMA1u6WA_e7CaXG5AlKfKqkQf from /host_sync
+[2020-03-09 09:42:29 +0100] Sync Log:  [END] Deleting web/sites/default/files/php/twig/5e5e608034404_fieldset.html.twig_hMA1u6WA_e7CaXG5AlKfKqkQf
+[2020-03-09 09:42:29 +0100] Sync Log:  [BGN] Deleting web/sites/default/files/php/twig/5e5fa17beef7f_links.html.twig_SlTRr3Yo4I8GMUtn_-FJqaHQY from /host_sync
+[2020-03-09 09:42:29 +0100] Sync Log:  [END] Deleting web/sites/default/files/php/twig/5e5fa17beef7f_links.html.twig_SlTRr3Yo4I8GMUtn_-FJqaHQY
+[2020-03-09 09:42:29 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:42:29.08 on 09 Mar 2020
+[2020-03-09 09:42:29 +0100] Sync Log:  Synchronization complete at 09:42:29  (2 items transferred, 0 skipped, 0 failed)
+[2020-03-09 09:42:30 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:42:30.20 on 09 Mar 2020
+[2020-03-09 09:42:30 +0100] Sync Log:  [BGN] Deleting web/sites/default/files/php/twig from /host_sync
+[2020-03-09 09:42:33 +0100] Sync Log:  [END] Deleting web/sites/default/files/php/twig
+[2020-03-09 09:42:33 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:42:32.93 on 09 Mar 2020
+[2020-03-09 09:42:33 +0100] Sync Log:  Synchronization complete at 09:42:32  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:43:39 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) started propagating changes at 09:43:39.61 on 09 Mar 2020
+[2020-03-09 09:43:39 +0100] Sync Log:  [BGN] Updating file composer.json from /app_sync to /host_sync
+[2020-03-09 09:43:39 +0100] Sync Log:  [END] Updating file composer.json
+[2020-03-09 09:43:39 +0100] Sync Log:  UNISON 2.51.2 (OCAML 4.06.1) finished propagating changes at 09:43:39.62 on 09 Mar 2020
+[2020-03-09 09:43:39 +0100] Sync Log:  Synchronization complete at 09:43:39  (1 item transferred, 0 skipped, 0 failed)
+[2020-03-09 09:50:14 +0100] Sync Log:  Error response from daemon: dial unix docker.raw.sock: connect: connection refused

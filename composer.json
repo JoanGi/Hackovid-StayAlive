@@ -16,9 +16,14 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/address": "^1.8",
+        "drupal/admin_toolbar": "^2.2",
+        "drupal/bootstrap": "^3.21",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8"
+        "drupal/core-recommended": "^8.8",
+        "drupal/devel": "^2.1",
+        "drupal/profile": "^1.1"
     },
     "conflict": {
         "drupal/drupal": "*"
