@@ -1,0 +1,9 @@
+services:
+  videotrucades.jitsi_manager:
+    class: Drupal\videotrucades\Services\v1\JitsiManager
+    arguments: ['@entity_type.manager', '@current_user']
+  videotrucades.jitsi_events:
+    class: Drupal\videotrucades\EventSubscriber\v1\VideotrucadesEvents
+    arguments: ['@entity_type.manager','@current_user','@videotrucades.jitsi_manager']
+    tags:
+      - { name: 'event_subscriber' }

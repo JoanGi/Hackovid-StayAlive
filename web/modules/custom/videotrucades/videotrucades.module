@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains wan_notifications.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function videotrucades_cron()
+{
+  // cron Hook
+}

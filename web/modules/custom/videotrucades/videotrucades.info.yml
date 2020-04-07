@@ -1,0 +1,6 @@
+name: 'Videotrucades'
+type: module
+description: 'Customs'
+core: 8.x
+package: 'Custom'
+
