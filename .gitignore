@@ -41,7 +41,7 @@ smtp.settings.yml
 # Ingore Db-presistance
 persistent-db
 
-.sql
+!.sql
 !db/stockDB.sql
 
 # Local database dumps
@@ -153,3 +153,4 @@ drush/sites/.checksums
 
 # Deprecation detector rules
 .rules
+/.editorconfig
