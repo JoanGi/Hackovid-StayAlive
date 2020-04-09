@@ -32,6 +32,10 @@ body {
 	line-height: 1;
 }
 
+section.col-sm-12 {
+    padding: 0;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -4080,7 +4084,9 @@ input, select, textarea {
 			#main {
 				padding: 3em 0 1em 0 ;
 			}
-
+			.icons.major {
+				display: none;
+			}
 		}
 
 /* Footer */
