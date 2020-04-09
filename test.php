@@ -75,4 +75,5 @@ $result = $ec2Client->runInstances(array(
 ));
 
 var_dump($result);
+print($result->get('InstanceId'));
 die();
