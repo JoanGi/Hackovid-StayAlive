@@ -1,11 +1,10 @@
 @import url(fontawesome-all.min.css);
 
 /*
-	Fractal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+/***/
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3150,7 +3149,7 @@ input, select, textarea {
 			color: #999999;
 		}
 		.wrapper.style2 .icons.major {
-			font-size: 25px;
+			font-size: 2rem;
 		}
 
 			.wrapper.style2 input[type="submit"],
@@ -4084,9 +4083,6 @@ input, select, textarea {
 			#main {
 				padding: 3em 0 1em 0 ;
 			}
-			.icons.major {
-				display: none;
-			}
 		}
 
 /* Footer */
@@ -4164,3 +4160,7 @@ input, select, textarea {
 		}
 
 	}
+/* Custom */
+#one span.solid.glyphicon.glyphicon-edit {
+    color: #4a96e5;
+}
