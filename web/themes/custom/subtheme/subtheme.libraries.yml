@@ -2,6 +2,18 @@ framework:
   css:
     theme:
       css/style.css: {}
+front:
+  css:
+    theme:
+      css/main.css: {}
+      css/noscript.css: {}
+  js:
+    js/breakpoints.min.js: {}
+    js/browser.min.js: {}
+    js/main.js: {}
+    js/util.js: {}
+    js/jquery.min.js: {}
+    js/jquery.scrolly.min.js: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

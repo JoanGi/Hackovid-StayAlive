@@ -19,12 +19,16 @@
         "drupal/address": "^1.8",
         "drupal/admin_toolbar": "^2.2",
         "drupal/bootstrap": "^3.21",
+        "drupal/bootstrap_paragraphs": "^2.0@beta",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/devel": "^2.1",
+        "drupal/fontawesome": "^2.15",
         "drupal/hook_event_dispatcher": "^1.27",
-        "drupal/profile": "^1.1"
+        "drupal/paragraphs": "^1.11",
+        "drupal/profile": "^1.1",
+        "drupal/twig_tweak": "^2.5"
     },
     "conflict": {
         "drupal/drupal": "*"
