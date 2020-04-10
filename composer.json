@@ -25,11 +25,15 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/devel": "^2.1",
+        "drupal/entity_limit": "^2.0@alpha",
+        "drupal/entity_redirect": "^1.5",
         "drupal/fontawesome": "^2.15",
+        "drupal/formblock": "^1.0@beta",
         "drupal/hook_event_dispatcher": "^1.27",
         "drupal/paragraphs": "^1.11",
         "drupal/profile": "^1.1",
-        "drupal/twig_tweak": "^2.5"
+        "drupal/twig_tweak": "^2.5",
+        "drupal/views_bootstrap": "^3.1"
     },
     "conflict": {
         "drupal/drupal": "*"
