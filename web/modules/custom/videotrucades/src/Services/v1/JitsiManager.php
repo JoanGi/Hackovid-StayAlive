@@ -133,7 +133,7 @@ SH;
   public function createInstance(array $values) {
     // Provisioning personalization for each jitsi instance.
     $subdomain = 'test1'; // Must com in the parameters
-    $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $subdomain, $this->provision_script);
+    $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $values['subdomain'$subdomain, $this->provision_script);
 
 $response = $this->ec2Client->runInstances(array(
     'DryRun' => false,
@@ -178,7 +178,7 @@ $response = $this->ec2Client->runInstances(array(
 	   * *IMportant*
 	   * $instanceId ha de venir del node via values
 	   * */
-$instanceId='i-00a4d115967cc574e'; 
+$instanceId='i-00a4d115967cc574e';
 $this->ec2Client->stopInstances(array('Force' => true, 'InstanceIds' => array($instanceId)));
   }
 
