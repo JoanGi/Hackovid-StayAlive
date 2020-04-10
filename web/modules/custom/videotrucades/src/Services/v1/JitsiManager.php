@@ -134,9 +134,8 @@ $response = $this->ec2Client->runInstances(array(
     ),
     'InstanceType' => 't2.micro',
     'InstanceInitiatedShutdownBehavior' => 'terminate',
-    'UserData' => base64_encode($provision_script),
+    'UserData' => base64_encode($this->provision_script),
 ));
-var_dump($response);
 
     return $response->get('InstanceId');
   }
