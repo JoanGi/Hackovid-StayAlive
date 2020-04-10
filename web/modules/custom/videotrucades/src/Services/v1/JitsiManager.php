@@ -70,10 +70,21 @@ cd /home/ubuntu/workspace
 git clone https://github.com/jitsi/docker-jitsi-meet.git jitsi
 chown -R ubuntu:ubuntu jitsi
 cd jitsi
+
 cp env.example .env
+## Add custom settings for jitsi.
+sed -i 's/HTTP_PORT=8000/HTTP_PORT=80/g' .env
+sed -i 's/HTTPS_PORT=8443/HTTPS_PORT=443/g' .env
+echo "ENABLE_LETSENCRYPT=1" >> .env
+echo "ENABLE_HTTP_REDIRECT=1" >> .env
+echo "LETSENCRYPT_DOMAIN=SUBDOMAIN_PLACEHOLDER.trobada.eu" >> .env
+echo "LETSENCRYPT_EMAIL=giner.joan@gmail.com" >> .env
+
 ./gen-passwords.sh
 mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
 chown -R ubuntu:ubuntu /home/ubuntu/.jitsi*
+sudo docker-compose up -d
+sleep 5
 sudo docker-compose up -d
 
 echo 'jitsi done' >> ~/provisioning.log
@@ -120,6 +131,10 @@ SH;
    *   Values from the content.
    */
   public function createInstance(array $values) {
+    // Provisioning personalization for each jitsi instance.
+    $subdomain = 'test1'; // Must com in the parameters
+    $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $subdomain, $this->provision_script);
+
 $response = $this->ec2Client->runInstances(array(
     'DryRun' => false,
     // ImageId is required
@@ -134,7 +149,7 @@ $response = $this->ec2Client->runInstances(array(
     ),
     'InstanceType' => 't2.micro',
     'InstanceInitiatedShutdownBehavior' => 'terminate',
-    'UserData' => base64_encode($this->provision_script),
+    'UserData' => base64_encode($provision),
 ));
 
     return $response->get('InstanceId');
