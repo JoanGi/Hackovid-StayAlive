@@ -95,7 +95,8 @@ class VideotrucadesEvents implements EventSubscriberInterface {
         $node_created = $this->entityTypeManager->getStorage($entity_type)->load($nid);
         $content_type = $node_created->bundle();
         if ($content_type == 'jitsi_instance') {
-            $this->JitsiManager->createInstance(['ola']);
+            $instance_id = $this->JitsiManager->createInstance([$node_created->getTitle()]);
+	    kint($instance_id);
         }
       }
     }
@@ -119,6 +120,7 @@ class VideotrucadesEvents implements EventSubscriberInterface {
         $node_updated = $this->entityTypeManager->getStorage($entity_type)->load($nid);
         $content_type = $node_updated->bundle();
         if ($content_type == 'jitsi_instance') {
+		kint($node_updated);
             $this->JitsiManager->updateInstance(['ola']);
         }
       }

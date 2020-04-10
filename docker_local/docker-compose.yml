@@ -47,6 +47,7 @@ services:
 
     volumes:
       - ../:/var/www/html
+      - /home/ubuntu/.aws:/home/wodby/.aws
 ## For macOS users (https://wodby.com/docs/stacks/drupal/local#docker-for-mac)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
@@ -195,7 +196,7 @@ services:
     container_name: "${PROJECT_NAME}_traefik"
     command: --api.insecure=true --providers.docker
     ports:
-      - '80:80'
+      - '4000:80'
 #      - '8080:8080' # Dashboard
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
