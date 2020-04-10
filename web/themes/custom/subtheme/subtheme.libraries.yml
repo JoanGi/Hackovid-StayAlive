@@ -2,6 +2,10 @@ framework:
   css:
     theme:
       css/style.css: {}
+user:
+  css:
+    theme:
+      css/user.css: {}
 front:
   css:
     theme:

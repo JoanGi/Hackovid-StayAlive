@@ -3,6 +3,42 @@
  * your custom CSS modifications here.
  */
 
-.col-sm-12 .region-header {
-    display: none;
+
+#header {
+    background-color: #4696e5;
+    color: #d1e5f9;
+    padding: 4.5em 0 2.5em 0;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-image: url(images/xoverlay.png.pagespeed.ic.K5GJYtBSUg.png) , url(images/pattern-size1.svg);
+    background-position: top left , center center;
+    background-attachment: fixed , fixed;
+    background-size: auto , cover;
+    min-height: 35em;
+    margin: -15px;
+    text-align: center;
+}
+#header h1 {
+    font-size: 3.25em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    color: white;
+
+}
+#user-wrapper {
+    text-align: left;
+    margin-top: 20px;
+    border: 4px dashed rgba(255,255,255,0.6);
+    padding: 30px;
+
 }
