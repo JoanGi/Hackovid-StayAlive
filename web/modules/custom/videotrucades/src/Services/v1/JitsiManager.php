@@ -2,6 +2,7 @@
 
 namespace Drupal\videotrucades\Services\v1;
 
+use Aws\Ec2\Ec2Client;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\user\Entity\User;
@@ -29,6 +30,56 @@ class JitsiManager {
   protected $currentUser;
 
   /**
+   * The ec2Client to manage instances
+   *
+   * @var Aws\Ec2\Ec2Client
+   */
+  private $ec2Client;
+
+  /**
+   * The provisioning script for jitsi machines
+   * @var string
+   */
+  private $provision_script = <<<SH
+#!/bin/bash
+
+echo 'Starting script' >> /home/ubuntu/provisioning.log
+# install Docker
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo service docker start
+# sudo systemctl status docker
+
+echo 'Docker done' >> /home/ubuntu/provisioning.log
+
+# Install docker compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+echo 'Docker-compose done' >> /home/ubuntu/provisioning.log
+
+# Pull code.
+mkdir /home/ubuntu/workspace
+cd /home/ubuntu/workspace
+git clone https://github.com/jitsi/docker-jitsi-meet.git jitsi
+chown -R ubuntu:ubuntu jitsi
+cd jitsi
+cp env.example .env
+./gen-passwords.sh
+mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
+chown -R ubuntu:ubuntu /home/ubuntu/.jitsi*
+sudo docker-compose up -d
+
+echo 'jitsi done' >> ~/provisioning.log
+SH;
+
+  /**
    * Constructor.
    *
    * @param Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
@@ -42,6 +93,12 @@ class JitsiManager {
   ) {
     $this->entityTypeManager = $entityTypeManager;
     $this->currentUser = $current_user;
+
+    $this->ec2Client = new \Aws\Ec2\Ec2Client([
+      'region' => 'eu-west-1',
+      'version' => '2016-11-15',
+      'profile' => 'default'
+    ]);
   }
 
   /**
@@ -63,8 +120,25 @@ class JitsiManager {
    *   Values from the content.
    */
   public function createInstance(array $values) {
-    kint($values);
-    die();
+$response = $this->ec2Client->runInstances(array(
+    'DryRun' => false,
+    // ImageId is required
+    'ImageId' => 'ami-0d1f717aa2de0a9d3',
+    // MinCount is required
+    'MinCount' => 1,
+    // MaxCount is required
+    'MaxCount' => 1,
+    'LaunchTemplate' => array(
+//	'LaunchTemplateId' => 'lt-0b80c0ae2e0aa922f',
+        'LaunchTemplateName' => 'Jitsi-instance',
+    ),
+    'InstanceType' => 't2.micro',
+    'InstanceInitiatedShutdownBehavior' => 'terminate',
+    'UserData' => base64_encode($provision_script),
+));
+var_dump($response);
+
+    return $response->get('InstanceId');
   }
   /**
    * Create instance
