@@ -83,12 +83,10 @@ sed -i 's/HTTPS_PORT=8443/HTTPS_PORT=443/g' .env
 ./gen-passwords.sh
 mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
 chown -R ubuntu:ubuntu /home/ubuntu/.jitsi*
-sudo docker-compose up -d
-sudo docker-compose -f docker-compose.yml -f etherpad.yml up
-sudo docker-compose -f docker-compose.yml -f jibri.yml up -d
+sudo docker-compose -f docker-compose.yml -f etherpad.yml up -d
 echo 'jitsi done' >> ~/provisioning.log
 
-wget http://ec2-3-249-33-80.eu-west-1.compute.amazonaws.com:4000/static/all.css
+wget --no-check-certificate https://trobada.eu/static/all.css
 sudo docker cp all.css jitsi_web_1:/usr/share/jitsi-meet/css
 sudo docker exec -it jitsi_web_1 sed -i 's/"title": "Videoconferència segura, plena de funcionalitats i completament gratuïta i lliure"/"title": "PAGE_TITLE_PLACEHOLDER"/g'  /usr/share/jitsi-meet/lang/main-ca.json
 sudo docker exec -it jitsi_web_1 sed -i 's/"appDescription": "Endavant, xat de vídeo amb tot l\x27equip. De fet, convideu tothom que conegueu. {{app}} és una solució de videoconferència de codi obert 100% completament xifrada que podeu utilitzar durant tot el dia, tots els dies,  gratuïtament, sense necessitat de compte."/"appDescription": "Podeu unir-vos a les sales de videoconferència que teniu llistades a continuació o crear-ne una nova. Per crear-ne de nova escriviu el nom i useu el botó SOM-HI."/g' /usr/share/jitsi-meet/lang/main-ca.json
