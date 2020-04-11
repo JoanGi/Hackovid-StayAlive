@@ -3147,6 +3147,7 @@ input, select, textarea {
 		.wrapper.style2 {
 			background-color: #fbfbfb;
 			color: #999999;
+			width: 105%;
 		}
 		.wrapper.style2 .icons.major {
 			font-size: 2rem;
@@ -4024,7 +4025,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) and (orientation: portrait) {
 
 		#header {
-			padding: 2em 1em 0.1em 1em ;
+			padding: 2em 2em 0.1em 3em;
 		}
 
 	}
@@ -4093,6 +4094,7 @@ input, select, textarea {
 		padding: 4.5em 0 2.5em 0 ;
 		color: #b0b0b0;
 		text-align: center;
+		width: 105%;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4157,6 +4159,7 @@ input, select, textarea {
 
 		#footer {
 			padding: 3em 1.5em 1em 1.5em ;
+			width: 105%;
 		}
 
 	}

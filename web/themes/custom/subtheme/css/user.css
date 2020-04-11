@@ -120,3 +120,8 @@
     padding: 15px;
     text-align: center;
 }
+
+#views-bootstrap-jitsi-instances-block-1 .col-xs-12.titol {
+    font-size: 18px;
+    font-weight: 700;
+}
