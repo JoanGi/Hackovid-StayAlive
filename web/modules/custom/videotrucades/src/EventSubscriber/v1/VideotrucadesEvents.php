@@ -102,11 +102,11 @@ class VideotrucadesEvents implements EventSubscriberInterface {
             'size' => $node_created->get('field_user')->value
           ];
           $instance_id = $this->JitsiManager->createInstance($values);
-          if (empty($node_created->get('field_id_instancia')->value)) {
-            $node_created->set('field_id_instance',$instance_id);
-            $node_created->save();
-          }
-	    kint($instance_id);
+          //if (empty($node_created->get('field_id_instancia')->value)) {
+            //$node_created->set('field_id_instance',$instance_id);
+            //$node_created->save();
+          //}
+	   // kint($instance_id);
         }
       }
     }

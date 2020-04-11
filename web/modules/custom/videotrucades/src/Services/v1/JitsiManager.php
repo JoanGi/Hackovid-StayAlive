@@ -156,18 +156,30 @@ $response = $this->ec2Client->runInstances(array(
     'InstanceInitiatedShutdownBehavior' => 'terminate',
     'UserData' => base64_encode($provision),
 ));
-
+    sleep(10);
+    \Drupal::logger('Importer')->notice('Exeption with message:  ' . $response['Instances'][0]['InstanceId']);
+    $result = $this->ec2Client->describeInstances([
+      'InstanceIds' => [
+        $response['Instances'][0]['InstanceId'],
+      ],
+    ]);
+    $ip = $result['Reservations'][0]['Instances'][0]['PublicIpAddress'];
 // Necessitem extreure la ipv4, 
-kint($response);
-die();
+             \Drupal::logger('Importer')->notice('Exeption with message:  ' . $result);
+
+      \Drupal::logger('Importer')->notice('Exeption with message:  ' . $result['Reservations'][0]['Instances'][0]['PublicIpAddress']);
+    \Drupal::logger('Importer')->notice('Exeption with message:  ' . $result['Reservations'][0]['Instances']);
+
+      \Drupal::logger('Importer')->notice('Exeption with message:  ' . $result['Instances'][0]['PublicIpAddress']);
 
 $route53_client = Route53Client::factory(array(
-    'profile' => 'default'
+      'region' => 'eu-west-1',
+      'version' => 'latest',
+      'profile' => 'default'
 ));
 
-/**
- *
-$result = $client->changeResourceRecordSets(array(
+
+$result = $route53_client->changeResourceRecordSets(array(
     // HostedZoneId is required
     'HostedZoneId' => 'Z02412072GE54NJ5SISOK',
     // ChangeBatch is required
@@ -181,14 +193,14 @@ $result = $client->changeResourceRecordSets(array(
                 // ResourceRecordSet is required
                 'ResourceRecordSet' => array(
                     // Name is required
-                    'Name' => $subdomain . '.trobada.eu.',
+                    'Name' => $values['subdomain'] . '.trobada.eu',
                     // Type is required
                     'Type' => 'A',
                     'TTL' => 600,
                     'ResourceRecords' => array(
                         array(
                             // Value is required
-                            'Value' => $response->get('PublicIpAddress'), // FALTA AIXÒ
+                            'Value' => $ip, // FALTA AIXÒ
                         ),
                     ),
                 ),
@@ -196,8 +208,7 @@ $result = $client->changeResourceRecordSets(array(
         ),
     ),
 ));
-
- */
+//die();
     return $response->get('InstanceId');
   }
   /**
