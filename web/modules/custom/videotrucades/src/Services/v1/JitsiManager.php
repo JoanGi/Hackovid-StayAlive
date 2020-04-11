@@ -84,10 +84,15 @@ cp env.example .env
 mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
 chown -R ubuntu:ubuntu /home/ubuntu/.jitsi*
 sudo docker-compose up -d
-sleep 5
-sudo docker-compose up -d
-
+sudo docker-compose -f docker-compose.yml -f etherpad.yml up
+sudo docker-compose -f docker-compose.yml -f jibri.yml up -d
 echo 'jitsi done' >> ~/provisioning.log
+
+wget http://ec2-3-249-33-80.eu-west-1.compute.amazonaws.com:4000/static/all.css
+sudo docker cp all.css jitsi_web_1:/usr/share/jitsi-meet/css
+
+echo 'jitsi personalization done' >> ~/provisioning.log
+
 SH;
 
   /**
