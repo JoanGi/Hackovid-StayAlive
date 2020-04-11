@@ -89,7 +89,8 @@ echo 'jitsi done' >> ~/provisioning.log
 wget --no-check-certificate https://trobada.eu/static/all.css
 sudo docker cp all.css jitsi_web_1:/usr/share/jitsi-meet/css
 sudo docker exec -it jitsi_web_1 sed -i 's/"title": "Videoconferència segura, plena de funcionalitats i completament gratuïta i lliure"/"title": "PAGE_TITLE_PLACEHOLDER"/g'  /usr/share/jitsi-meet/lang/main-ca.json
-sudo docker exec -it jitsi_web_1 sed -i 's/"appDescription": "Endavant, xat de vídeo amb tot l\x27equip. De fet, convideu tothom que conegueu. {{app}} és una solució de videoconferència de codi obert 100% completament xifrada que podeu utilitzar durant tot el dia, tots els dies,  gratuïtament, sense necessitat de compte."/"appDescription": "Podeu unir-vos a les sales de videoconferència que teniu llistades a continuació o crear-ne una nova. Per crear-ne de nova escriviu el nom i useu el botó SOM-HI."/g' /usr/share/jitsi-meet/lang/main-ca.json
+#sudo docker exec -it jitsi_web_1 sed -i 's/"appDescription": "Endavant, xat de vídeo amb tot l\x27equip. De fet, convideu tothom que conegueu. {{app}} és una solució de videoconferència de codi obert 100% completament xifrada que podeu utilitzar durant tot el dia, tots els dies,  gratuïtament, sense necessitat de compte."/"appDescription": "Podeu unir-vos a les sales de videoconferència que teniu llistades a continuació o crear-ne una nova. Per crear-ne de nova escriviu el nom i useu el botó SOM-HI."/g' /usr/share/jitsi-meet/lang/main-ca.json
+sudo docker exec -it jitsi_web_1 sed -i 's/"appDescription": "Endavant, xat de vídeo amb tot l\x27equip. De fet, convideu tothom que conegueu. {{app}} és una solució de videoconferència de codi obert 100% completament xifrada que podeu utilitzar durant tot el dia, tots els dies,  gratuïtament, sense necessitat de compte."/"appDescription": "DESCRIPTION_PLACEHOLDER"/g' /usr/share/jitsi-meet/lang/main-ca.json
 
 echo 'jitsi personalization done' >> ~/provisioning.log
 
@@ -139,6 +140,8 @@ SH;
     // Provisioning personalization for each jitsi instance.
     $subdomain = 'test1'; // Must com in the parameters
     $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $values['subdomain'], $this->provision_script);
+    $provision = str_replace('PAGE_TITLE_PLACEHOLDER', $values['title'], $provision);
+    $provision = str_replace('DESCRIPTION_PLACEHOLDER', $values['description'], $provision);
 
 $response = $this->ec2Client->runInstances(array(
     'DryRun' => false,
@@ -156,7 +159,7 @@ $response = $this->ec2Client->runInstances(array(
     'InstanceInitiatedShutdownBehavior' => 'terminate',
     'UserData' => base64_encode($provision),
 ));
-    sleep(10);
+    sleep(5);
     \Drupal::logger('Importer')->notice('Exeption with message:  ' . $response['Instances'][0]['InstanceId']);
     $result = $this->ec2Client->describeInstances([
       'InstanceIds' => [
