@@ -75,10 +75,10 @@ cp env.example .env
 ## Add custom settings for jitsi.
 sed -i 's/HTTP_PORT=8000/HTTP_PORT=80/g' .env
 sed -i 's/HTTPS_PORT=8443/HTTPS_PORT=443/g' .env
-#echo "ENABLE_LETSENCRYPT=1" >> .env
-#echo "ENABLE_HTTP_REDIRECT=1" >> .env
-#echo "LETSENCRYPT_DOMAIN=SUBDOMAIN_PLACEHOLDER.trobada.eu" >> .env
-#echo "LETSENCRYPT_EMAIL=giner.joan@gmail.com" >> .env
+echo "ENABLE_LETSENCRYPT=1" >> .env
+echo "ENABLE_HTTP_REDIRECT=1" >> .env
+echo "LETSENCRYPT_DOMAIN=SUBDOMAIN_PLACEHOLDER.trobada.eu" >> .env
+echo "LETSENCRYPT_EMAIL=giner.joan@gmail.com" >> .env
 
 ./gen-passwords.sh
 mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
