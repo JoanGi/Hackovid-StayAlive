@@ -3,13 +3,13 @@
 namespace Drupal\videotrucades\Services\v1;
 
 use Aws\Ec2\Ec2Client;
+use Aws\Route53\Route53Client;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\user\Entity\User;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Database\Connection;
-
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Notifications Manager.
@@ -73,12 +73,12 @@ cd jitsi
 
 cp env.example .env
 ## Add custom settings for jitsi.
-sed -i 's/HTTP_PORT=8000/HTTP_PORT=80/g' .env
-sed -i 's/HTTPS_PORT=8443/HTTPS_PORT=443/g' .env
-echo "ENABLE_LETSENCRYPT=1" >> .env
-echo "ENABLE_HTTP_REDIRECT=1" >> .env
-echo "LETSENCRYPT_DOMAIN=SUBDOMAIN_PLACEHOLDER.trobada.eu" >> .env
-echo "LETSENCRYPT_EMAIL=giner.joan@gmail.com" >> .env
+#sed -i 's/HTTP_PORT=8000/HTTP_PORT=80/g' .env
+#sed -i 's/HTTPS_PORT=8443/HTTPS_PORT=443/g' .env
+#echo "ENABLE_LETSENCRYPT=1" >> .env
+#echo "ENABLE_HTTP_REDIRECT=1" >> .env
+#echo "LETSENCRYPT_DOMAIN=SUBDOMAIN_PLACEHOLDER.trobada.eu" >> .env
+#echo "LETSENCRYPT_EMAIL=giner.joan@gmail.com" >> .env
 
 ./gen-passwords.sh
 mkdir -p /home/ubuntu/.jitsi-meet-cfg/{web/letsencrypt,transcripts,prosody,jicofo,jvb,jigasi,jibri}
@@ -133,7 +133,7 @@ SH;
   public function createInstance(array $values) {
     // Provisioning personalization for each jitsi instance.
     $subdomain = 'test1'; // Must com in the parameters
-    $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $values['subdomain'$subdomain, $this->provision_script);
+    $provision = str_replace('SUBDOMAIN_PLACEHOLDER', $values['subdomain'], $this->provision_script);
 
 $response = $this->ec2Client->runInstances(array(
     'DryRun' => false,
@@ -152,6 +152,47 @@ $response = $this->ec2Client->runInstances(array(
     'UserData' => base64_encode($provision),
 ));
 
+// Necessitem extreure la ipv4, 
+kint($response);
+die();
+
+$route53_client = Route53Client::factory(array(
+    'profile' => 'default'
+));
+
+/**
+ *
+$result = $client->changeResourceRecordSets(array(
+    // HostedZoneId is required
+    'HostedZoneId' => 'Z02412072GE54NJ5SISOK',
+    // ChangeBatch is required
+    'ChangeBatch' => array(
+        'Comment' => 'string',
+        // Changes is required
+        'Changes' => array(
+            array(
+                // Action is required
+                'Action' => 'CREATE',
+                // ResourceRecordSet is required
+                'ResourceRecordSet' => array(
+                    // Name is required
+                    'Name' => $subdomain . '.trobada.eu.',
+                    // Type is required
+                    'Type' => 'A',
+                    'TTL' => 600,
+                    'ResourceRecords' => array(
+                        array(
+                            // Value is required
+                            'Value' => $response->get('PublicIpAddress'), // FALTA AIXÒ
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+));
+
+ */
     return $response->get('InstanceId');
   }
   /**
