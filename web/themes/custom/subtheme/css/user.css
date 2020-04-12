@@ -125,3 +125,8 @@
     font-size: 18px;
     font-weight: 700;
 }
+.listin .field.field--name-user-picture.field--type-image.field--label-hidden.field--item {
+
+    display: none;
+
+}
